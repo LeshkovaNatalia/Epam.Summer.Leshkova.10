@@ -12,7 +12,7 @@ namespace ClassLibraryLogicQueue
     public sealed class CustomQueue<T>
     {
         #region Const
-        private const int MaxLength = 100;
+        private const int MinLength = 10;
         #endregion
 
         #region Fields
@@ -42,7 +42,7 @@ namespace ClassLibraryLogicQueue
 
         public CustomQueue()
         {
-            _collection = new T[MaxLength];
+            _collection = new T[MinLength];
             _head = 0;
             _end = 0;
             _count = 0;
@@ -58,7 +58,7 @@ namespace ClassLibraryLogicQueue
 
         public CustomQueue(T[] elements)
         {
-            _collection = new T[MaxLength];
+            _collection = new T[MinLength];
             elements.CopyTo(_collection, 0);
             _end = elements.Length;
             _count = elements.Length;
@@ -67,14 +67,18 @@ namespace ClassLibraryLogicQueue
         #endregion
 
         #region Public Mathods Enqueue | Dequeue | Peek
+
         /// <summary>
-        /// Method Enqueue add element to the Queue.
+        /// Method Enqueue add element to the Queue. Check and change capacity.
         /// </summary>
         /// <param name="element">Element thats add.</param>
         public void Enqueue(T element)
         {
-            if (_end == MaxLength)
-                throw new ArgumentException(nameof(Enqueue));
+            if (Count == _collection.Length)
+            {
+                int newcapacity = _collection.Length + MinLength;
+                SetCapacity(newcapacity);
+            }
 
             _collection[_end] = element;
             _end++;
@@ -119,6 +123,22 @@ namespace ClassLibraryLogicQueue
         #endregion
 
         #region Private Methods
+
+        /// <summary>
+        /// Method SetCapacity create array of new capacity.
+        /// </summary>
+        /// <param name="capacity">New capacity.</param>
+        private void SetCapacity(int capacity)
+        {
+            T[] newCollection = new T[capacity];
+
+            if (Count > 0)
+                Array.Copy(_collection, _head, newCollection, 0, Count);
+
+            _collection = newCollection;
+            _head = 0;
+            _end = (Count == capacity) ? 0 : Count;
+        }
 
         /// <summary>
         /// Method GetElement return element from Queue.

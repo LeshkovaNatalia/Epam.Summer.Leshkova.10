@@ -31,6 +31,9 @@ namespace ClassLibraryCustomQueueNUnit
                 yield return
                     new TestCaseData(new CustomQueue<int>(new[] {5, 7, 7, 9, 6, 10}), 10, new[] {5, 7, 7, 9, 6, 10, 10})
                     ;
+                yield return
+                    new TestCaseData(new CustomQueue<int>(new[] { 5, 7, 7, 9, 6, 10, 12, 8, 9, 14 }), 17, new[] { 5, 7, 7, 9, 6, 10, 12, 8, 9, 14, 17 })
+                    ;
             }
         }
 
