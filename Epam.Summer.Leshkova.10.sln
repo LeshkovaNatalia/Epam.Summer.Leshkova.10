@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryLogicQueue", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCustomQueueNUnit", "ClassLibraryCustomQueueNUnit\ClassLibraryCustomQueueNUnit.csproj", "{635A2272-520C-4909-AE4E-5DC8B816B96E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryLogicSet", "ClassLibraryLogicSet\ClassLibraryLogicSet.csproj", "{4205E06F-5D5D-401B-8591-EDB3D83011C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrarySetNUnit", "ClassLibrarySetNUnit\ClassLibrarySetNUnit.csproj", "{66745E83-72FD-4249-A7B9-0DAC678C007E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{635A2272-520C-4909-AE4E-5DC8B816B96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{635A2272-520C-4909-AE4E-5DC8B816B96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{635A2272-520C-4909-AE4E-5DC8B816B96E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4205E06F-5D5D-401B-8591-EDB3D83011C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4205E06F-5D5D-401B-8591-EDB3D83011C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4205E06F-5D5D-401B-8591-EDB3D83011C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4205E06F-5D5D-401B-8591-EDB3D83011C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66745E83-72FD-4249-A7B9-0DAC678C007E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66745E83-72FD-4249-A7B9-0DAC678C007E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66745E83-72FD-4249-A7B9-0DAC678C007E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66745E83-72FD-4249-A7B9-0DAC678C007E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
